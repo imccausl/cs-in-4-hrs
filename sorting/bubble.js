@@ -1,19 +1,20 @@
 function bubbleSort(array) {
-  let index = 0;
+  let swapped = false;
 
   do {
-    for (let i = 0; i < array.length; i += 1) {
-      const currItem = array[i],
-        prevItem = array[i - 1];
+    swapped = false;
 
-      if (currItem < prevItem) {
-        array[i] = prevItem;
-        array[i - 1] = currItem;
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[i] > array[i + 1]) {
+        const temp = array[i];
+
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+
+        swapped = true;
       }
     }
-
-    index += 1;
-  } while (index < array.length);
+  } while (swapped);
 }
 
 module.exports = bubbleSort;
