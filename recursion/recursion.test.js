@@ -16,5 +16,7 @@ describe('fibonacci', () => {
     expect(fibonacci(20)).toBe(6765);
     expect(fibonacci(15)).toBe(610);
     expect(fibonacci(25)).toBe(75025);
+    expect(fibonacci(28)).toBe(317811);
+    expect(fibonacci(35)).toBe(9227465);
   });
 });
